@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>한줄 스튜디오 — 대본 그대로, 말소리에 맞춘 자막</title>
-<meta name="description" content="한줄 스튜디오는 대본과 완성 영상으로 자막을 만드는 Windows 프로그램입니다. 대본의 대사로 자막을 만들고, 말하는 시간에 맞춥니다. 영상은 PC에서만 처리합니다.">
+<title>한줄 스튜디오 — 휴대폰에서 대본과 영상으로 자막 편집</title>
+<meta name="description" content="휴대폰 브라우저에서 대본과 영상을 올리면 말소리에 맞춘 자막 초안이 생깁니다. 문구와 시간을 확인하고 자막 영상이나 SRT를 받으세요. 웹 편집기는 서버에서, Windows 설치판은 사용자 PC에서 처리합니다.">
 <link rel="canonical" href="https://kkoma1212.github.io/hanjul-studio/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="한줄 스튜디오">
-<meta property="og:title" content="한줄 스튜디오 — 대본 그대로, 말소리에 맞춘 자막">
-<meta property="og:description" content="대본과 완성 영상을 넣으면 대본의 대사로 자막을 만들고, 말하는 시간에 맞춥니다. Windows용 무료 시험판.">
+<meta property="og:title" content="한줄 스튜디오 — 휴대폰에서 대본과 영상으로 자막 편집">
+<meta property="og:description" content="대본과 영상을 올리고 말소리에 맞춘 자막을 확인하세요. 휴대폰 웹 편집기에서 자막 문구를 다듬고 완성 영상과 SRT를 받을 수 있습니다.">
 <meta property="og:url" content="https://kkoma1212.github.io/hanjul-studio/">
 <meta property="og:image" content="https://kkoma1212.github.io/hanjul-studio/assets/og.png">
 <meta property="og:image:width" content="1200">
@@ -24,15 +24,13 @@
 <link rel="stylesheet" href="assets/main.css">
 <script>document.documentElement.classList.add("has-js")</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"한줄 스튜디오","operatingSystem":"Windows 10, Windows 11","applicationCategory":"MultimediaApplication",
- "description":"대본과 완성 영상으로 자막을 만드는 Windows 프로그램. 대본의 대사로 자막을 만들고, 말하는 시간에 맞춘다.",
- "offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"url":"https://kkoma1212.github.io/hanjul-studio/",
- "downloadUrl":"https://github.com/kkoma1212/jamakfit-updates/releases/latest/download/jamakfit-setup.exe"}
+{"@context":"https://schema.org","@graph":[
+ {"@type":"WebApplication","name":"한줄 스튜디오 웹 편집기","applicationCategory":"MultimediaApplication","description":"휴대폰 브라우저에서 대본과 영상을 올리면 서버가 말소리에 맞춰 자막 초안을 만듭니다. 자막을 편집하고 영상과 SRT를 내려받을 수 있습니다.","url":"https://hanjul-studio.kkoma1212.workers.dev/app/"},
+ {"@type":"SoftwareApplication","name":"한줄 스튜디오 Windows 설치판","operatingSystem":"Windows 10, Windows 11","applicationCategory":"MultimediaApplication","description":"대본과 영상으로 자막을 만들고 사용자 PC에서 처리합니다.","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"downloadUrl":"https://github.com/kkoma1212/jamakfit-updates/releases/latest/download/jamakfit-setup.exe"}]}
 </script>
 </head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
-<!-- 머리줄·첫 화면·하는 일 띠는 수정 전 공개판 모양 그대로(건윤님 2026-10-23 '처음 부분은 수정 전이 나아', 영상 장면은 쓰지 않음). 글만 새 글 -->
 <header class="bar">
   <div class="wrap bar__in">
     <a class="brand" href="#top" aria-label="한줄 스튜디오 처음으로"><img src="assets/logo-light.svg" alt="한줄 스튜디오" width="118" height="34"></a>
@@ -47,7 +45,7 @@
         <li><a href="#faq">자주 묻는 질문</a></li>
       </ul>
     </nav>
-    <a class="btn btn--box bar__cta" href="https://github.com/kkoma1212/jamakfit-updates/releases/latest/download/jamakfit-setup.exe">설치 파일 받기</a>
+    <a class="btn btn--box bar__cta" href="https://hanjul-studio.kkoma1212.workers.dev/app/">편집기 열기</a>
   </div>
 </header>
 
@@ -55,25 +53,33 @@
   <section id="top" class="hero" aria-labelledby="hero-title">
     <div class="wrap hero__grid">
       <div>
-        <p class="pill"><b>무료 시험판 0.9</b>Windows용</p>
-        <h1 id="hero-title"><span>대본 그대로,</span> <span><em>말소리에</em> 맞춘 자막</span></h1>
-        <p class="hero__lead">대본과 완성 영상을 넣으면 대본의 대사를 그대로 자막으로 쓰고, 말하는 시간에 맞춥니다. 시간이 애매한 줄만 따로 표시합니다.</p>
+        <h1 id="hero-title"><span><em>휴대폰에서</em></span> <span>대본과 영상으로</span> <span>자막을 만드세요</span></h1>
+        <p class="hero__lead">휴대폰 브라우저에서 로그인하고 시나리오와 영상을 올리세요. 대사를 말한 순간에 자막이 놓입니다. 문구와 시간을 다듬고 완성 영상이나 자막 파일(SRT)을 받으세요.</p>
         <div class="cta">
-          <a class="btn btn--box" href="https://github.com/kkoma1212/jamakfit-updates/releases/latest/download/jamakfit-setup.exe">설치 파일 받기 (Windows)</a>
-          <a class="btn btn--box btn--outline" href="https://hanjul-studio.kkoma1212.workers.dev/">사이트에서 바로 쓰기</a>
+          <a class="btn btn--box" href="https://hanjul-studio.kkoma1212.workers.dev/app/">웹 편집기 열기</a>
+          <a class="btn btn--box btn--outline" href="#phone-demo">10초 예시 보기</a>
         </div>
-        <ul class="facts">
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>설치판은 영상을 PC에서만 처리</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>설치판은 회원가입 없이 사용</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>자동 업데이트</li>
-        </ul>
+        <p class="desktop-link">PC에서 작업하시나요? <a href="#download">Windows 설치판 받기</a></p>
       </div>
-      <figure class="laptop">
-        <div class="laptop__screen"><picture><source media="(max-width:599px)" srcset="assets/shots/check-m.webp"><img src="assets/shots/check.webp" width="1440" height="900" fetchpriority="high"
-          alt="한줄 스튜디오 확인 화면: 확인이 필요한 줄 8개 중 하나. 왼쪽 영상에 '…왔사옵니다' 자막, 오른쪽에 대본 줄과 '맞아요'·'조금 일찍'·'조금 늦게' 단추"></picture></div>
-        <div class="laptop__base"></div>
-        <figcaption>확인 화면 · 《조선에 출동했습니다》 시즌3 5편</figcaption>
-      </figure>
+      <section class="phone-demo" id="phone-demo" aria-labelledby="phone-demo-title">
+        <h2 id="phone-demo-title">10초로 보는 폰 편집</h2>
+        <figure class="phone-demo__preview">
+          <img src="pricing/cover.webp" width="1120" height="630" fetchpriority="high" alt="해 질 무렵 산줄기가 겹쳐 보이는 바다">
+          <figcaption id="phone-demo-caption" hidden>바다에 저녁빛이 내려요.</figcaption>
+        </figure>
+        <ol class="phone-demo__steps">
+          <li data-time="0"><strong>파일 선택</strong><p>‘바다 산책.txt’와 ‘해 질 무렵.mp4’를 선택합니다.</p></li>
+          <li data-time="3"><strong>자막 초안</strong><p>말소리에 맞춰 “바다에 저녁빛이 내려요.”가 영상에 놓입니다.</p></li>
+          <li data-time="7"><strong>확인</strong><p>“바다에 저녁빛이 내립니다.”로 고칩니다. 편집기에서는 완성 영상(MP4)과 자막(SRT)을 받을 수 있습니다.</p></li>
+        </ol>
+        <div class="phone-demo__controls" hidden>
+          <div class="phone-demo__transport"><button type="button" id="phone-demo-play">예시 재생</button><span id="phone-demo-time" aria-hidden="true">0 / 10초</span></div>
+          <input type="range" id="phone-demo-seek" min="0" max="10" step="0.1" value="0" aria-label="예시 재생 위치" aria-valuetext="0초, 파일 선택">
+          <div class="phone-demo__jumps" role="group" aria-label="예시 단계 선택">
+            <button type="button" data-jump="0">파일 선택</button><button type="button" data-jump="3">자막 초안</button><button type="button" data-jump="7">확인</button>
+          </div>
+        </div>
+      </section>
     </div>
   </section>
   <div class="clouds" aria-hidden="true"></div>
@@ -104,7 +110,7 @@
             <source src="assets/video/demo.mp4" type="video/mp4">
           </video>
         </div>
-        <figcaption>사용 영상 49초 · 시즌3 5편 작업을 처음부터 완성까지 녹화했습니다. 기다리는 구간은 빠르게 돌렸고 화면에 배속을 표시했습니다. 소리는 없습니다. 단계 설명 자막은 한줄 스튜디오의 '자막 파일 넣기' 기능으로 입혔습니다(소리가 없어 자막 시간은 직접 맞춤).</figcaption>
+        <figcaption>Windows 설치판 사용 영상 49초 · 시즌3 5편 작업을 처음부터 완성까지 녹화했습니다. 기다리는 구간은 빠르게 돌렸고 화면에 배속을 표시했습니다. 소리는 없습니다. 단계 설명 자막은 한줄 스튜디오의 '자막 파일 넣기' 기능으로 입혔습니다(소리가 없어 자막 시간은 직접 맞춤).</figcaption>
       </figure>
       <ol class="steps">
         <li>
@@ -246,7 +252,7 @@
           <thead><tr><th scope="col">도구</th><th scope="col">처리하는 곳</th><th scope="col">출처</th></tr></thead>
           <tbody>
             <tr class="us"><th scope="row">한줄 스튜디오 (PC에 설치)</th><td>사용자 PC<small>인터넷은 인식 <span class="nowrap">모델·그래픽카드</span> 부품 첫 내려받기, 업데이트 확인, 로그인, 동의한 사용 통계에만 씁니다.</small></td><td class="table__src"><small><a class="link" href="https://hanjul-studio.kkoma1212.workers.dev/privacy">개인정보 처리방침</a></small></td></tr>
-            <tr class="us"><th scope="row">한줄 스튜디오 (사이트에서)</th><td>운영자 PC<small>올린 대본과 영상은 작업을 만든 날부터 7일 뒤 삭제</small></td><td class="table__src"><small><a class="link" href="https://hanjul-studio.kkoma1212.workers.dev/privacy">개인정보 처리방침</a></small></td></tr>
+            <tr class="us"><th scope="row">한줄 스튜디오 웹 편집기</th><td>한줄 스튜디오 서버<small>회원이 올린 대본과 영상을 처리합니다. 작업 보관 기간은 <a class="link" href="pricing/">웹 요금제</a>에서 확인할 수 있습니다.</small></td><td class="table__src"><small><a class="link" href="https://hanjul-studio.kkoma1212.workers.dev/privacy">개인정보 처리방침</a></small></td></tr>
             <tr><th scope="row">CapCut 자동 캡션</th><td>클라우드</td><td class="table__src"><small><a class="link" href="https://www.capcut.com/help/auto-captions">CapCut 도움말</a></small></td></tr>
             <tr><th scope="row">Vrew</th><td>서버<small>음성만 전송, 영상은 전송하지 않으며 1시간 이내 삭제한다고 안내</small></td><td class="table__src"><small><a class="link" href="https://docs.channel.io/vrew-kr/ko/articles/AI%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4-Vrew%EC%97%90-%EC%97%85%EB%A1%9C%EB%93%9C%ED%95%9C-%EC%98%81%EC%83%81-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%8A%94-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%B2%98%EB%A6%AC-%EB%90%98%EB%82%98%EC%9A%94-ffbcc099">Vrew 도움말</a></small></td></tr>
             <tr><th scope="row">YouTube 자동 자막</th><td>YouTube 서버<small>영상 업로드 필요</small></td><td class="table__src"><small><a class="link" href="https://support.google.com/youtube/answer/2734796?hl=ko">YouTube 고객센터</a></small></td></tr>
@@ -261,15 +267,15 @@
   <section id="safety" class="sec" aria-labelledby="safety-title">
     <div class="wrap">
       <div class="sec__head">
-        <h2 id="safety-title" class="h2">개인정보와 안전</h2>
-        <p class="sec__lead">PC에 설치해 쓰면 대사 알아듣기와 자막 입히기를 모두 사용자 PC에서 하고, 인터넷은 아래 경우에만 씁니다. 사이트에서 쓰는 경우는 <a class="link" href="#faq">자주 묻는 질문</a>에 적었습니다.</p>
+        <h2 id="safety-title" class="h2">Windows 설치판의 개인정보와 안전</h2>
+        <p class="sec__lead">설치판은 대사 인식과 자막 출력을 사용자 PC에서 처리합니다. 웹 편집기는 로그인한 회원이 올린 대본과 영상을 한줄 스튜디오 서버에서 처리합니다.</p>
       </div>
       <ul class="grid3">
         <li><h3 class="h3"><span class="nowrap">영상·대본·자막은</span> 보내지 않음</h3><p>작업 파일은 PC의 작업 폴더에만 저장됩니다.</p></li>
         <li><h3 class="h3">처음 실행할 때 내려받기</h3><p>대사를 알아듣는 데 쓰는 인식 모델(약 <span class="nowrap">1.6GB)을</span> 받습니다. NVIDIA 그래픽카드가 있으면 그래픽카드 부품(약 <span class="nowrap">1.4GB)도</span> 받습니다.</p></li>
         <li><h3 class="h3">전자 서명이 맞는 새 판만 적용</h3><p>실행할 때 새 판이 있는지 확인합니다. 전자 서명이 맞는 파일만 적용하고, 새 판이 켜지지 않으면 이전 판으로 되돌립니다.</p></li>
         <li><h3 class="h3">사용 통계는 동의한 경우만</h3><p>2026년 10월 27일부터, 동의한 경우에만 하루 단위로 만든 작업 <span class="nowrap">수·완성</span> 영상 수와 오류 종류를 보냅니다. <span class="nowrap">대사·파일</span> <span class="nowrap">이름·영상은</span> 보내지 않습니다.</p></li>
-        <li><h3 class="h3">로그인은 선택</h3><p>계정 없이 모든 기능을 쓸 수 있습니다.</p></li>
+        <li><h3 class="h3">설치판 로그인은 선택</h3><p>계정 없이 PC에서 기본 자막 편집과 출력을 할 수 있습니다.</p></li>
         <li><h3 class="h3">원본 파일은 바꾸지 않음</h3><p>대본과 영상 원본은 읽기만 하고, 결과물은 따로 저장합니다.</p></li>
       </ul>
       <p class="note">자세한 내용은 <a class="link" href="https://hanjul-studio.kkoma1212.workers.dev/privacy">개인정보 처리방침</a>에 있습니다.</p>
@@ -279,7 +285,7 @@
   <section id="download" class="sec" aria-labelledby="download-title">
     <div class="wrap">
       <div class="sec__head">
-        <h2 id="download-title" class="h2">설치</h2>
+        <h2 id="download-title" class="h2">Windows 설치판 받기</h2>
       </div>
       <div class="install">
         <div class="card">
@@ -301,13 +307,13 @@
             <li>지울 때는 Windows 설정 → 앱에서 한줄 스튜디오를 찾아 '제거'를 누릅니다. 만든 작업까지 지울지 묻고, 기본은 남겨 둡니다.</li>
           </ol>
           <a class="btn" href="https://github.com/kkoma1212/jamakfit-updates/releases/latest/download/jamakfit-setup.exe">설치 파일 받기 (Windows)</a>
-          <p class="card__sub"><a class="link" href="https://hanjul-studio.kkoma1212.workers.dev/">설치 없이 사이트에서 바로 쓰기</a> · <a class="link" href="https://github.com/kkoma1212/jamakfit-updates/releases">업데이트 내역(GitHub)</a></p>
+          <p class="card__sub"><a class="link" href="https://hanjul-studio.kkoma1212.workers.dev/app/">설치 없이 사이트에서 바로 쓰기</a> · <a class="link" href="https://github.com/kkoma1212/jamakfit-updates/releases">업데이트 내역(GitHub)</a></p>
         </div>
         <div class="aside">
           <h3 class="h3">알아 둘 점</h3>
           <ul>
             <li><span class="nowrap">시험판(0.9)입니다.</span> 지금까지 Windows 11 PC 한 대에서 확인했습니다.</li>
-            <li>Windows 11의 '스마트 앱 컨트롤'이 켜진 PC에서는 설치도 실행도 되지 않습니다. 아직 코드 서명 인증서가 없기 때문입니다. 이런 PC에서는 <a class="link" href="https://hanjul-studio.kkoma1212.workers.dev/">사이트에 로그인해</a> 브라우저로 써 주세요.</li>
+            <li>Windows 11의 '스마트 앱 컨트롤'이 켜진 PC에서는 설치도 실행도 되지 않습니다. 아직 코드 서명 인증서가 없기 때문입니다. 이런 PC에서는 <a class="link" href="https://hanjul-studio.kkoma1212.workers.dev/app/">사이트에 로그인해</a> 브라우저로 써 주세요.</li>
             <li>Windows 전용이며, 한국어 대본과 영상을 기준으로 만들었습니다.</li>
             <li>자막 시간과 장면 구분은 말소리를 알아들어 정한 것입니다. 표시된 줄은 확인이 필요합니다.</li>
           </ul>
@@ -325,20 +331,20 @@
       <div class="faq">
         <details><summary>편집 프로그램을 처음 써도 쓸 수 있나요?</summary><p>네, 처음 쓰는 분을 생각하고 만들었습니다. 대본과 영상을 넣으면 자막 문구와 시간은 한줄 스튜디오가 먼저 맞춰 둡니다. 직접 볼 곳은 시간이 애매하다고 표시된 줄뿐이고, 시즌3 5편에서는 55줄 중 8줄이었습니다. 자막 모양도 말로 고르지 않고, 실제 장면에 미리 그려 둔 4가지를 눈으로 보고 고릅니다.</p></details>
         <details><summary>무료인가요?</summary><p>Windows용 시험판은 무료입니다. 웹 편집기는 하루 3편까지 무료로 편집할 수 있고, SRT 자막과 워터마크 없는 MP4를 내려받을 수 있습니다. 유료 상품별 가격과 출시 예정 기능은 <a class="link" href="pricing/">웹 요금제 안내</a>에서 확인하세요.</p></details>
-        <details><summary>Mac이나 휴대폰에서도 쓸 수 있나요?</summary><p>PC에 설치하는 한줄 스튜디오는 Windows 전용입니다. Mac이나 휴대폰에서는 <a class="link" href="https://hanjul-studio.kkoma1212.workers.dev/">사이트에 로그인해</a> 브라우저로 쓸 수 있습니다. 휴대폰 화면 폭에 맞춰 두었고, Mac에서는 아직 직접 시험해 보지 못했습니다.</p></details>
+        <details><summary>휴대폰에서 자막을 어떻게 만드나요?</summary><p><a class="link" href="https://hanjul-studio.kkoma1212.workers.dev/app/">웹 편집기</a>에 로그인한 뒤 대본을 붙여 넣거나 파일로 선택하고 영상을 올립니다. 말소리에 맞춰 나온 초안을 확인하고 고친 뒤 완성 영상(MP4)과 자막 파일(SRT)을 내려받을 수 있습니다. Mac에서도 웹 편집기에 접속할 수 있습니다. Mac 실기기에서의 동작은 아직 확인하지 못했습니다. 설치판은 Windows용입니다.</p></details>
         <details><summary>어떤 대본 파일을 넣나요?</summary><p>PDF, 텍스트(.txt), Word(.docx) 파일을 넣습니다. 파일이 없으면 대사만 한 줄씩 붙여 넣어도 됩니다. PDF는 글자를 마우스로 끌어 고를 수 있어야 하고, 종이를 스캔해 사진처럼 만든 PDF는 읽지 못합니다. 한글(.hwp)로 쓴 대본은 'PDF로 저장'해서 넣거나 대사를 복사해 붙여 넣으면 됩니다. 대본을 고르면 장면과 대사를 몇 줄 읽었는지 먼저 보여 드리고, 잘못 읽은 줄은 눌러서 고칠 수 있습니다.</p></details>
         <details><summary>대본이 없으면 쓸 수 없나요?</summary><p>자막 문구를 대본에서 가져오는 방식이라 대본이 있어야 합니다. 이미 만들어 둔 자막 <span class="nowrap">파일(SRT)이</span> 있다면 첫 화면 아래 '다른 곳에서 만든 자막 파일을 영상에 넣기'로 한줄 스튜디오 모양을 입혀 영상으로 만들 수 있습니다.</p></details>
         <details><summary>어떤 영상을 넣나요?</summary><p>편집을 모두 마치고 자막만 넣기 전인 완성 영상(MP4·MOV·MKV·M4V)을 넣습니다. 편집이 끝난 영상이어야 대사 시간이 맞습니다. 자막이 이미 들어간 영상이라면 넣을 때 '네, 들어 있어요'를 고르세요. 그 위에 자막을 또 입히지 않고 자막 <span class="nowrap">파일(SRT)만</span> 만듭니다. 소리가 없는 영상은 대사를 들을 수 없어서 시작하기 전에 알려 드립니다.</p></details>
         <details><summary>대본과 다르게 말한 대사는 어떻게 되나요?</summary><p>대본 글과 실제로 들린 말이 많이 다르면 그 줄을 따로 표시합니다. 확인 화면에서 '들린 대로 쓰기'를 누르면 들린 말로, '글자 고치기'를 누르면 원하는 글로 바꿉니다. 편집하며 잘려서 영상에 없는 대사는 '자막에서 빼기'로 뺍니다.</p></details>
-        <details><summary>그래픽카드가 없어도 되나요?</summary><p>됩니다. 그래픽카드가 없으면 CPU로 대사를 알아듣고, 시간이 더 걸립니다. 4분 영상이 NVIDIA 그래픽카드 PC에서는 약 20초, 8코어 데스크톱 CPU(AMD Ryzen 7 <span class="nowrap">9700X)에서는</span> 약 1분 걸렸습니다. 노트북처럼 CPU가 느린 PC는 더 걸립니다. 같은 편으로 한 번 비교해 보니 자막 결과는 거의 같았고, 완성 영상 파일은 Windows 기본 방식으로 만들어 약 1.2배 컸습니다.</p></details>
-        <details><summary>처음 실행할 때 왜 오래 걸리나요?</summary><p>처음 한 번만 대사를 알아듣는 데 필요한 파일(약 <span class="nowrap">1.6GB)을</span> 내려받기 때문입니다. NVIDIA 그래픽카드가 있으면 그래픽카드용 부품(약 <span class="nowrap">1.4GB)도</span> 함께 받습니다. 인터넷 속도에 따라 몇 분 걸리고, 다음부터는 바로 시작합니다.</p></details>
+        <details><summary>Windows 설치판은 그래픽카드가 없어도 되나요?</summary><p>됩니다. 그래픽카드가 없으면 CPU로 대사를 알아듣고, 시간이 더 걸립니다. 4분 영상이 NVIDIA 그래픽카드 PC에서는 약 20초, 8코어 데스크톱 CPU(AMD Ryzen 7 <span class="nowrap">9700X)에서는</span> 약 1분 걸렸습니다. 노트북처럼 CPU가 느린 PC는 더 걸립니다. 같은 편으로 한 번 비교해 보니 자막 결과는 거의 같았고, 완성 영상 파일은 Windows 기본 방식으로 만들어 약 1.2배 컸습니다.</p></details>
+        <details><summary>Windows 설치판을 처음 실행할 때 왜 오래 걸리나요?</summary><p>처음 한 번만 대사를 알아듣는 데 필요한 파일(약 <span class="nowrap">1.6GB)을</span> 내려받기 때문입니다. NVIDIA 그래픽카드가 있으면 그래픽카드용 부품(약 <span class="nowrap">1.4GB)도</span> 함께 받습니다. 인터넷 속도에 따라 몇 분 걸리고, 다음부터는 바로 시작합니다.</p></details>
         <details><summary>설치할 때 'Windows의 PC 보호' 창이 떠요.</summary><p>아직 코드 서명 인증서가 없어서 뜨는 창입니다. '추가 정보'를 누른 뒤 '실행'을 누르면 설치가 이어집니다. 설치 파일은 이 사이트의 단추나 GitHub 공식 배포 페이지(kkoma1212/jamakfit-updates)에서만 받아 주세요.</p></details>
-        <details><summary>'스마트 앱 컨트롤'이 막았다며 설치가 안 돼요.</summary><p>Windows 11을 새로 설치한 PC에는 '스마트 앱 컨트롤'이 켜져 있을 수 있습니다. 이 기능은 코드 서명 인증서가 없는 프로그램을 막는데, 한줄 스튜디오는 아직 인증서가 없어서 설치도 실행도 되지 않습니다. 'Windows의 PC 보호' 창과 달리 '실행'으로 넘어갈 수 없습니다. 이런 PC에서는 <a class="link" href="https://hanjul-studio.kkoma1212.workers.dev/">사이트에 로그인해</a> 브라우저로 써 주세요. 켜져 있는지는 Windows 보안 → 앱 및 브라우저 컨트롤에서 볼 수 있습니다.</p></details>
-        <details><summary>설치하지 않고 사이트에서 쓸 수 있나요?</summary><p>회원으로 로그인하면 사이트에서 바로 쓸 수 있습니다. 대신 올린 대본과 영상은 운영자 PC의 그래픽카드(RTX 3060) 한 대가 차례로 처리해서, 사람이 몰리거나 영상이 길면 기다릴 수 있습니다. 회원마다 하루 3편, 한 편에 20분까지 쓸 수 있고, 올린 파일은 작업을 만든 날부터 7일 뒤 지웁니다. 자주 쓰거나 영상이 길다면 PC에 설치해 쓰는 쪽이 빠릅니다.</p></details>
-        <details><summary>영상이 인터넷으로 올라가나요?</summary><p>PC에 설치해 쓰면 올라가지 않습니다. 대사를 알아듣는 일과 자막을 입히는 일을 모두 그 PC 안에서 합니다. 인터넷은 처음 내려받기, 새 판 확인, 로그인, 그리고 동의한 경우의 사용 통계에만 씁니다(위 '개인정보와 안전'). 사이트에서 쓰면 대본과 영상이 운영자 PC로 올라가고, 7일 뒤 지워집니다.</p></details>
-        <details><summary>로그인해야 하나요?</summary><p>PC에 설치해 쓰면 로그인하지 않아도 모든 기능을 쓸 수 있습니다. 사이트에서 쓰려면 회원 가입과 로그인이 필요합니다. 비밀번호를 잊었다면 로그인 화면의 '비밀번호를 잊었나요?'에서 메일로 받은 번호로 새로 정할 수 있습니다.</p></details>
+        <details><summary>'스마트 앱 컨트롤'이 막았다며 설치가 안 돼요.</summary><p>Windows 11을 새로 설치한 PC에는 '스마트 앱 컨트롤'이 켜져 있을 수 있습니다. 이 기능은 코드 서명 인증서가 없는 프로그램을 막는데, 한줄 스튜디오는 아직 인증서가 없어서 설치도 실행도 되지 않습니다. 'Windows의 PC 보호' 창과 달리 '실행'으로 넘어갈 수 없습니다. 이런 PC에서는 <a class="link" href="https://hanjul-studio.kkoma1212.workers.dev/app/">사이트에 로그인해</a> 브라우저로 써 주세요. 켜져 있는지는 Windows 보안 → 앱 및 브라우저 컨트롤에서 볼 수 있습니다.</p></details>
+        <details><summary>웹 편집기는 하루에 얼마나 쓸 수 있나요?</summary><p>무료 회원은 하루 3편, 한 편에 20분까지 작업할 수 있고 작업을 7일간 보관합니다. 이용 중인 요금제의 편수와 보관 기간은 <a class="link" href="pricing/">웹 요금제</a>에서 확인할 수 있습니다. 실제 처리 시간은 영상 길이와 서버의 대기 작업에 따라 달라집니다.</p></details>
+        <details><summary>영상은 어디에서 처리하나요?</summary><p>웹 편집기에 올린 대본과 영상은 한줄 스튜디오 서버에서 처리합니다. Windows 설치판은 대사 인식과 자막 출력을 사용자 PC에서 하며 작업 파일도 PC의 작업 폴더에 저장합니다.</p></details>
+        <details><summary>로그인해야 하나요?</summary><p>웹 편집기는 회원으로 로그인해 사용합니다. Windows 설치판에서는 로그인 없이 기본 자막 편집과 출력을 할 수 있습니다. 비밀번호를 잊었다면 로그인 화면의 '비밀번호를 잊었나요?'에서 메일로 받은 번호로 새로 정할 수 있습니다.</p></details>
         <details><summary>CapCut 같은 다른 프로그램에서 이어서 고칠 수 있나요?</summary><p>네. 완성 화면의 'CapCut에서 더 고치려면 자막 파일만 받기'로 자막 <span class="nowrap">파일(SRT)을</span> 받아 불러오면 됩니다. CapCut PC에서는 '캡션 → 캡션 추가 → 파일 가져오기'(버전에 따라 '텍스트 → 로컬 <span class="nowrap">캡션')로</span> 불러옵니다. 자막 시간은 그대로 들어가고, 글꼴과 모양은 그 프로그램에서 다시 고릅니다.</p></details>
-        <details><summary>본편을 잘라 쇼츠로 만들 수 있나요?</summary><p>아직은 안 됩니다. 쇼츠는 인터뷰 대본과 인물별 장면 클립을 넣어 만드는 인터뷰 쇼츠만 됩니다. 질문 자막과 구역 카드, 앞뒤 화면까지 넣어 세로 <span class="nowrap">영상(1080×1920)으로</span> 만듭니다.</p></details>
+        <details><summary>본편을 잘라 쇼츠로 만들 수 있나요?</summary><p>웹 요금제에는 긴 자막 영상의 구간을 골라 세로 쇼츠로 다듬는 Pro·Team 기능이 안내되어 있습니다. 자세한 내용은 <a class="link" href="pricing/">웹 요금제</a>에서 확인하세요. Windows 설치판은 인터뷰 대본과 인물별 장면 클립으로 질문 자막과 구역 카드를 넣은 세로 쇼츠를 만듭니다.</p></details>
         <details><summary>새 판은 어떻게 받나요?</summary><p>따로 할 일은 없습니다. 한줄 스튜디오를 켤 때 새 판이 있는지 확인해 받아 두고, 다음에 켤 때 바뀝니다. 전자 서명이 맞는 파일만 쓰고, 새 판이 제대로 켜지지 않으면 이전 판으로 돌아갑니다. 만들어 둔 작업은 그대로입니다. 드물게 큰 변경이 있을 때는 새 설치 파일을 받으라는 안내가 뜹니다.</p></details>
         <details><summary>지우려면 어떻게 하나요?</summary><p>Windows 설정 → 앱에서 한줄 스튜디오를 찾아 '제거'를 누릅니다. 만든 작업까지 지울지 묻고, 기본은 남겨 둡니다.</p></details>
       </div>
@@ -347,9 +353,9 @@
 
   <section class="band band--final" aria-labelledby="final-title">
     <div class="wrap final">
-      <h2 id="final-title" class="h2">Windows용 무료 시험판</h2>
-      <p>설치 파일 약 108MB · Windows 10 이상 64비트</p>
-      <a class="btn" href="https://github.com/kkoma1212/jamakfit-updates/releases/latest/download/jamakfit-setup.exe">설치 파일 받기</a>
+      <h2 id="final-title" class="h2">내 영상에 자막을 달아 보세요</h2>
+      <p>휴대폰에 대본과 영상이 있으면 브라우저에서 바로 시작할 수 있습니다.</p>
+      <a class="btn" href="https://hanjul-studio.kkoma1212.workers.dev/app/">웹 편집기 열기</a>
     </div>
   </section>
 </main>
